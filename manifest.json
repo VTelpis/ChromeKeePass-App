@@ -1,6 +1,7 @@
 {
   "name": "ChromeKeePass App",
   "version": "2015.3.5",
+  //"version_name": "pre-alpha",
   "manifest_version": 2,
   "minimum_chrome_version": "38",
   "description": "KeePass password database App for Chrome",
@@ -12,5 +13,13 @@
     "background": {
       "scripts": ["background.js"]
     }
-  }
+  },
+  "file_handlers": {
+    "KeePass": {
+      "extensions": ["kdb", "kdbx"]
+    }
+  },
+  "permissions": ["fileSystem", "clipboardWrite"],
+  "optional_permissions": ["clipboardRead"],
+  "short_name": "CKP"
 }
