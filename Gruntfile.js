@@ -22,8 +22,14 @@ module.exports = function(grunt) {
     copy: {
       bower: {
         files: [
+          {expand: true, cwd: 'bower_components/angular/', src: 'angular.min.js', dest: 'lib/'},
           {expand: true, cwd: 'bower_components/angular/', src: 'angular.min.css', dest: 'lib/'},
           {expand: true, cwd: 'bower_components/angular/', src: 'angular-csp.css', dest: 'lib/'},
+
+          {expand: true, cwd: 'bower_components/angular-aria/', src: 'angular-aria.min.js', dest: 'lib/'},
+          {expand: true, cwd: 'bower_components/angular-material/', src: 'angular-material.min.js', dest: 'lib/'},
+          {expand: true, cwd: 'bower_components/angular-material/', src: 'angular-material.min.css', dest: 'lib/'},
+
           {expand: true, cwd: 'bower_components/angular-animate/', src: 'angular-animate.min.js', dest: 'lib/'},
           {expand: true, cwd: 'bower_components/angular-route/', src: 'angular-route.min.js', dest: 'lib/'},
           {expand: true, cwd: 'bower_components/angular-sanitize/', src: 'angular-sanitize.min.js', dest: 'lib/'}
