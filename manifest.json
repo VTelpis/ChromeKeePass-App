@@ -3,16 +3,14 @@
   "version": "2015.3.5",
   "manifest_version": 2,
   "minimum_chrome_version": "38",
-
   "description": "KeePass password database App for Chrome",
   "icons": {
     "16": "assets/icons/logo_16.png",
     "48": "assets/icons/logo_48.png"
   },
-  "oauth2": {
-    "client_id": "252911279862-spv4ks48i07fqbjvd3isorei5au254b5.apps.googleusercontent.com",
-    "scopes": [
-      "https://www.googleapis.com/auth/drive.readonly"
-    ]
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
   }
 }
