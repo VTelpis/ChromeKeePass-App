@@ -1,5 +1,5 @@
-# ChromeKeePass
-Chrome app for reading KeePass password files.  
+# ChromeKeePass App
+Chrome app for reading KeePass password files.  WIP, nowhere near ready!
 
 ## Running or Updating the code locally
 If you want to hack on the code...

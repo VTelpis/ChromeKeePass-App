@@ -14,10 +14,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: [
-          {expand: true, src: 'popups/**/*.js', dest:'build/'},
-          {expand: true, src: 'background/**/*.js', dest:'build/'},
           {expand: true, src: 'services/**/*.js', dest:'build/'},
-          {expand: true, src: 'options/**/*.js', dest:'build/'},
           {expand: true, src: ['*.js', '!Gruntfile.js', '!tests/*', '!bower_components/**/*'], dest:'build/'}
           ]
       }
@@ -25,15 +22,11 @@ module.exports = function(grunt) {
     copy: {
       bower: {
         files: [
-          {expand: true, cwd: 'bower_components/Case/dist/', src: 'case.min.js', dest: 'lib/'},
-          {expand: true, cwd: 'bower_components/json-formatter/dist/', src: 'json-formatter.min.js', dest: 'lib/'},
-          {expand: true, cwd: 'bower_components/json-formatter/dist/', src: 'json-formatter.min.css', dest: 'lib/'},
           {expand: true, cwd: 'bower_components/angular/', src: 'angular.min.css', dest: 'lib/'},
           {expand: true, cwd: 'bower_components/angular/', src: 'angular-csp.css', dest: 'lib/'},
           {expand: true, cwd: 'bower_components/angular-animate/', src: 'angular-animate.min.js', dest: 'lib/'},
           {expand: true, cwd: 'bower_components/angular-route/', src: 'angular-route.min.js', dest: 'lib/'},
-          {expand: true, cwd: 'bower_components/angular-sanitize/', src: 'angular-sanitize.min.js', dest: 'lib/'},
-          {expand: true, cwd: 'bower_components/animate.css/', src: 'animate.css', dest: 'lib/'}
+          {expand: true, cwd: 'bower_components/angular-sanitize/', src: 'angular-sanitize.min.js', dest: 'lib/'}
           ]
       }
     },
@@ -47,16 +40,12 @@ module.exports = function(grunt) {
             + '*/\n',
         },
         files: {
-          "popups/popup.css": "popups/popup.less",
-          "options/options.css": "options/options.less"
         }
       }
     },
     cssmin: {
       target: {
         files: [
-          {expand: true, src: 'popups/**/*.css', dest:'build/'},
-          {expand: true, src: 'options/**/*.css', dest:'build/'},
           {expand: true, src: 'lib/**/*.css', dest:'build/'},
           {expand: true, src: '*.css', dest:'build/'}
           ]
